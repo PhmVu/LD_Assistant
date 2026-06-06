@@ -12,6 +12,10 @@
   <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker ready" />
 </p>
 
+<p align="center">
+  <img src="docs/images/home.png" alt="LD Home" />
+</p>
+
 <p>
   <a href="#tong-quan">Tong quan</a> |
   <a href="#module-chinh">Module chinh</a> |
