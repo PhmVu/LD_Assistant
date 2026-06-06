@@ -1,0 +1,68 @@
+{
+  "source": "optimized-multi-user-scan",
+  "started_at": "2026-06-06T00:17:53.567792",
+  "run_dir": "E:\\LD\\backend\\services\\qa_scanner\\multi_user_runs\\rerun_20260606_tuan_ip",
+  "usernames": [
+    "jr-nguyenthanhtuan-ty"
+  ],
+  "performance": {
+    "baseline_from_current_user": {
+      "records": 439,
+      "qa_review_scan_sec": 286.9,
+      "sec_per_record": 0.654
+    },
+    "configured_parallelism": {
+      "user_workers": 1,
+      "job_workers_per_user": 4,
+      "record_workers_per_user": 8,
+      "max_record_requests_in_flight": 8,
+      "max_job_requests_in_flight": 4,
+      "records_only_inventory": true,
+      "issue_rows_only_output": true,
+      "fetch_statistics": false
+    },
+    "rough_estimate_for_439_record_user": {
+      "qa_review_scan_sec_at_record_workers": 44.8,
+      "note": "1.25x includes scheduling/retry overhead; real time depends on LD latency and throttling."
+    },
+    "user_count": 1
+  },
+  "results": [
+    {
+      "username": "jr-nguyenthanhtuan-ty",
+      "started_at": "2026-06-06T00:17:53.567792",
+      "user_dir": "E:\\LD\\backend\\services\\qa_scanner\\multi_user_runs\\rerun_20260606_tuan_ip\\jr-nguyenthanhtuan-ty",
+      "cookie_source": "data\\user\\jr-nguyenthanhtuan-ty.json",
+      "cookie_identity": {
+        "match": true,
+        "method": "current_user",
+        "user": {
+          "userId": 23340,
+          "name": "jr-nguyenthanhtuan-ty"
+        }
+      },
+      "resolved_user": {
+        "username": "jr-nguyenthanhtuan-ty",
+        "display_name": "nguyenthanhtuan",
+        "user_id": null,
+        "hashes": [],
+        "source": "local:data\\ld_memory\\qa\\accounts\\jr-nguyenthanhtuan-ty.json",
+        "resolved": false,
+        "has_scanner_cookie": false,
+        "scanner_cookie_length": 0,
+        "has_scanner_session": false,
+        "scanner_session_length": 0
+      },
+      "jobs_result": {
+        "ok": false,
+        "path": "E:\\LD\\backend\\services\\qa_scanner\\multi_user_runs\\rerun_20260606_tuan_ip\\jr-nguyenthanhtuan-ty\\ld_jobs_jr-nguyenthanhtuan-ty.json",
+        "errors": []
+      },
+      "job_count": 0,
+      "ok": false,
+      "error": "No jobs found for user. Need admin-visible user/job endpoint or a valid jobs cache.",
+      "finished_at": "2026-06-06T00:17:55.851769"
+    }
+  ],
+  "finished_at": "2026-06-06T00:17:55.852896"
+}

@@ -1,0 +1,205 @@
+/* ════════════════════════════════════════
+   ABOUT PAGE STYLES
+   ════════════════════════════════════════ */
+
+.ld-about { min-height: 100vh; position: relative; }
+
+/* ── Tabs ── */
+.ld-about-tabs {
+  position: fixed;
+  top: 64px;
+  left: 0; right: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the tabs */
+  gap: 8px;
+  padding: 0 32px;
+  height: 52px;
+  background: transparent; /* Transparent by default */
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.ld-about-tabs.scrolled {
+  background: var(--bg-panel);
+  border-bottom-color: var(--border-color);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+
+.ld-about-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  border-radius: var(--r-sm);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color var(--t-base), background var(--t-base);
+}
+
+.ld-about-tab.active {
+  background: rgba(34,211,238,0.1);
+  color: var(--ld-cyan);
+  font-weight: 600;
+}
+
+.ld-about-tab:hover:not(.active) {
+  background: rgba(255,255,255,0.05);
+  color: var(--text-primary);
+}
+
+/* ── Main ── */
+.ld-about-main {
+  padding-top: 116px;
+  min-height: 100vh;
+}
+
+.ld-about-section {
+  position: relative;
+  min-height: calc(100vh - 116px);
+  overflow: hidden;
+  padding: 60px 24px 80px;
+}
+
+.ld-about-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ── Hero block ── */
+.ld-about-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.ld-about-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.ld-about-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+/* ── Features grid ── */
+.ld-about-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* ── Stats ── */
+.ld-about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .ld-about-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+.ld-about-stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  text-align: center;
+  transition: border-color var(--t-base), transform var(--t-base);
+}
+
+.ld-about-stat:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+}
+
+.ld-about-stat-val {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.ld-about-stat-lbl {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ── Layout preview ── */
+.ld-layout-preview {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--r-lg);
+  padding: 28px;
+}
+
+.ld-layout-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.ld-layout-diagram {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.ld-layout-left {
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ld-layout-right {
+  flex: 2;
+  min-width: 80px;
+}
+
+.ld-layout-divider {
+  width: 3px;
+  border-radius: 3px;
+  background: var(--border-color);
+  flex-shrink: 0;
+}
+
+.ld-layout-block {
+  border: 1px solid;
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* ── Fade in ── */
+.fade-in { animation: fadeIn 0.3s ease; }

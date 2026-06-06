@@ -1,0 +1,110 @@
+/* ─────────────────────────────────────────────
+   SubNav — Dashboard secondary navigation pill
+   ───────────────────────────────────────────── */
+
+.ld-subnav-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  padding: 0 24px;
+}
+
+.ld-subnav {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  gap: 2px;
+  padding: 5px;
+  /* Light mode */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(14, 165, 233, 0.12);
+  border-radius: 9999px;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.07), 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ld-subnav:hover {
+  border-color: rgba(14, 165, 233, 0.2);
+  box-shadow: 0 6px 28px rgba(14, 165, 233, 0.1);
+}
+
+/* Dark mode overrides */
+.ld-subnav-container.dark .ld-subnav {
+  background: rgba(13, 21, 38, 0.75);
+  border-color: rgba(34, 211, 238, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(34, 211, 238, 0.04);
+}
+
+.ld-subnav-container.dark .ld-subnav:hover {
+  border-color: rgba(34, 211, 238, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 16px rgba(34, 211, 238, 0.08);
+}
+
+.ld-subnav-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: color 0.25s cubic-bezier(0.25, 1, 0.5, 1), transform 0.2s;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.ld-subnav-link:hover {
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.ld-subnav-link.active {
+  color: #ffffff !important;
+}
+
+/* Light mode: active text is white on colored indicator — looks great */
+.ld-subnav-container:not(.dark) .ld-subnav-link.active {
+  color: #ffffff !important;
+}
+
+.ld-subnav-icon {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 18px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.2s;
+}
+
+.ld-subnav-link.active .ld-subnav-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ld-subnav-indicator {
+  position: absolute;
+  height: calc(100% - 10px);
+  top: 5px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 60%, #8b5cf6 100%);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  width: 0;
+  left: 0;
+  z-index: 0;
+  transition: box-shadow 0.3s;
+}
+
+.ld-subnav-container.dark .ld-subnav-indicator {
+  background: linear-gradient(135deg, #22d3ee 0%, #6366f1 60%, #8b5cf6 100%);
+  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}

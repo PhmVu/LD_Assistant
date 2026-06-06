@@ -1,0 +1,22 @@
+{
+  "username": "jr-nguyenthanhtuan-ty",
+  "display_name": "nguyenthanhtuan",
+  "user_id": null,
+  "hashes": [],
+  "source": "local:data\\ld_memory\\qa\\accounts\\jr-nguyenthanhtuan-ty.json",
+  "resolved": false,
+  "resolve_errors": [
+    "GET /appen/backend/user/all username: HTTP 403: {\"message\": \"You don't have access for current request\", \"status\": 403, \"time\": \"2026-06-06T01:11:56.851872+08:00[GMT+08:00]\"}",
+    "GET /appen/backend/um/bpo-worker/list keyword: HTTP 403: {\"message\": \"You don't have access for current request\", \"status\": 403, \"time\": \"2026-06-06T01:11:56.929557+08:00[GMT+08:00]\"}",
+    "GET /appen/backend/user/all uniqueName: HTTP 403: {\"message\": \"You don't have access for current request\", \"status\": 403, \"time\": \"2026-06-06T01:11:57.000041+08:00[GMT+08:00]\"}",
+    "GET /appen/backend/user/all name: HTTP 403: {\"message\": \"You don't have access for current request\", \"status\": 403, \"time\": \"2026-06-06T01:11:57.070214+08:00[GMT+08:00]\"}",
+    "GET /appen/backend/user/all emailsOrNames: HTTP 403: {\"message\": \"You don't have access for current request\", \"status\": 403, \"time\": \"2026-06-06T01:11:57.140014+08:00[GMT+08:00]\"}",
+    "POST /appen/backend/job/internal-worker-candidates keyword: HTTP 403: {\"message\": \"You don't have access for current request\", \"status\": 403, \"time\": \"2026-06-06T01:11:57.217925+08:00[GMT+08:00]\"}",
+    "POST /appen/backend/job/internal-worker-candidates filter: HTTP 403: {\"message\": \"You don't have access for current request\", \"status\": 403, \"time\": \"2026-06-06T01:11:57.288028+08:00[GMT+08:00]\"}",
+    "POST /appen/backend/job/internal-worker-candidates emailsOrNames: HTTP 403: {\"message\": \"You don't have access for current request\", \"status\": 403, \"time\": \"2026-06-06T01:11:57.358526+08:00[GMT+08:00]\"}"
+  ],
+  "has_scanner_cookie": false,
+  "scanner_cookie_length": 0,
+  "has_scanner_session": false,
+  "scanner_session_length": 0
+}

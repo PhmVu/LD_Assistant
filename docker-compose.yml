@@ -1,0 +1,42 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: ld-backend
+    restart: unless-stopped
+    ports:
+      - "7788:8000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./data/user:/app/data/user
+      - ./data/report:/app/data/report
+      - ./data/scanner:/app/data/scanner
+      - ./data/ld_memory:/app/data/ld_memory
+    environment:
+      - PYTHONPATH=/app
+      - DATA_DIR=/app/data/ld_memory
+      - QA_USER_DIR=/app/data/user
+      - QA_REPORT_DIR=/app/data/report
+      - QA_SCANNER_RUNTIME_DIR=/app/data/scanner
+    networks:
+      - ld-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ld-frontend
+    restart: unless-stopped
+    ports:
+      - "7789:80"
+    depends_on:
+      - backend
+    networks:
+      - ld-net
+
+
+networks:
+  ld-net:
+    driver: bridge

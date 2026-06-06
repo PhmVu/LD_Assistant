@@ -1,0 +1,44 @@
+# Environment and secrets
+.env
+.env.*
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+!*.env.example
+!**/.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node / frontend build
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+
+# Runtime data and local scan artifacts
+data/
+tmp/
+tools_local/
+*.log
+*.err.log
+*.cookie
+*cookie*
+*session*
+
+# Internal/raw documents
+docs/*.docx
+docs/*.xlsx
+backend/storage/docs/
+backend/storage/docs_index.json
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
