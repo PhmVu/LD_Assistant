@@ -84,11 +84,11 @@ Toan bo anh trong README duoc lay tu `docs/images/` de dong bo voi bo anh da chu
 | :--- | :--- | :--- |
 | ![Dashboard user](docs/images/dashboard-user.png) | ![Dashboard admin](docs/images/dashboard-admin.png) | ![Hieu suat](docs/images/hieu-suat.png) |
 
-### Tri thuc va AI LD
+### Tri thuc
 
-| Tri thuc | AI flow | AI architecture |
-| :--- | :--- | :--- |
-| ![Tri thuc](docs/images/tri-thuc.png) | ![AI flow](docs/images/ld-ai-flow.png) | ![AI architecture](docs/images/ld-ai-architecture.png) |
+| Tri thuc |
+| :--- |
+| ![Tri thuc](docs/images/tri-thuc.png) |
 
 ### Tong quan he sinh thai
 
@@ -96,32 +96,17 @@ Toan bo anh trong README duoc lay tu `docs/images/` de dong bo voi bo anh da chu
 | :--- |
 | ![AI-LD](docs/images/AI-LD.png) |
 
-## Flow AI LD
+## AI Flow
+
+![AI flow](docs/images/ld-ai-flow.png)
+
+### Moi luong xu ly
 
 LD AI khong duoc build nhu mot chatbot goi model truc tiep. Ban chat cua no la mot pipeline tu build cau tra loi noi bo truoc, sau do moi cho LLM polish co kiem soat. Cach nay giup he thong giu dung quy tac annotation, tranh model tu bia them luat, va van co cau tra loi tu nhien cho nguoi dung.
 
-```mermaid
-flowchart LR
-    A[User message / image] --> B[Domain Guard]
-    B -->|Allowed| C[Intent Parser]
-    B -->|Out of domain| X[Safe Refusal]
-    C --> D[Knowledge Retriever]
-    C --> E[Case Reasoner]
-    C --> F[Drawing Engine]
-    D --> G[Core Response Builder]
-    E --> G
-    F --> G
-    G --> H[Protected Facts]
-    H --> I[LLM Polish]
-    I --> J[Polish Guard]
-    J -->|Accepted| K[Final Answer]
-    J -->|Rejected| L[Repair or Fallback]
-    L --> K
-    F --> M[LaneCanvas Drawing]
-    K --> N[Chat Stream Response]
-    M --> N
-    N --> O[Feedback / Memory]
-```
+## AI Architecture
+
+![AI architecture](docs/images/ld-ai-architecture.png)
 
 ### AI duoc build nhu the nao
 
@@ -164,24 +149,9 @@ GET  /api/ld/qa-history/{user_id}
 
 ---
 
-## Flow Scan QA
+## Scan QA Flow
 
 Scanner hien tai da duoc chuyen vao backend, khong con la tool roi nam ngoai kien truc. Code scanner thuoc `backend/services/qa_scanner`; runtime file nam trong `data/scanner`.
-
-```mermaid
-flowchart LR
-    A[Username] --> B[Resolve LD account]
-    B --> C[Prepare cookie / session]
-    C --> D[Fetch full data]
-    D --> E[Fetch QA review issues]
-    E --> F[Filter error records only]
-    F --> G[data/report/username.json]
-    D --> H[Build user summary]
-    E --> H
-    H --> I[data/user/username.json]
-    I --> J[Dashboard / Performance]
-    G --> J
-```
 
 ### Du lieu sau scan
 
