@@ -90,6 +90,12 @@ Toan bo anh trong README duoc lay tu `docs/images/` de dong bo voi bo anh da chu
 | :--- |
 | ![Tri thuc](docs/images/tri-thuc.png) |
 
+### Chat AI
+
+| Chat AI |
+| :--- |
+| ![Chat AI](docs/images/chat-AI.png) |
+
 ### Tong quan he sinh thai
 
 | AI-LD |
