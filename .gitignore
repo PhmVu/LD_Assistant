@@ -25,6 +25,9 @@ dist/
 data/
 tmp/
 tools_local/
+backend/tests/
+backend/storage/
+backend/services/qa_scanner/multi_user_runs/
 *.log
 *.err.log
 *.cookie
@@ -34,8 +37,6 @@ tools_local/
 # Internal/raw documents
 docs/*.docx
 docs/*.xlsx
-backend/storage/docs/
-backend/storage/docs_index.json
 
 # OS/editor noise
 .DS_Store
